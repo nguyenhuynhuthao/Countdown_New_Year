@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700,800,900');
+@import url('https://fonts.googleapis.com/css?family=Lobster:100,200,300,400,500,600,700,800,900');
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto';
+}
+
+body {
+	background: #1b3241;
+	color: #fff;
+}
+
+.container {
+	position: absolute;
+	top: 80px;
+	left: 100px;
+	right: 100px;
+	bottom: 80px;
+	background: url('../images/transparent-cityscape-25.png');
+	background-position: center bottom;
+	background-repeat: repeat-x; 
+	background-size: contain;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	box-shadow: 0 50px 50px rgba(0, 0, 0, .5),
+	0 0 0 100px rgbr(0, 0, 0, .1);
+}
+
+.container h2 {
+	text-align: center;
+	font-size: 3em;
+	font-family: 'Lobster';
+}
+
+.container p {
+	position: absolute;
+	bottom: 5px;
+}
+
+.countdown {
+	display: flex;
+	margin-top: 10px;
+	background: rgba(0, 0, 0, 0.4); 
+}
+
+.countdown div {
+	position: relative;
+	width: 120px;
+	height: 150px;
+	line-height: 150px;
+	text-align: center;
+	background: transparent;
+	margin: 0 15px;
+	font-size: 5em;
+}
+
+
+.countdown #second {
+	color: #f05487;
+}
+
+.countdown div:after {
+	content: '';
+	position: absolute;
+	bottom: -5px;
+	left: 0;
+	width: 100%;
+	height: 35px;
+	color: #fff;
+	font-size: .2em;
+	line-height: 30px;
+	text-transform: uppercase;
+}
+
+.countdown #day::after {
+	content: 'Days'
+}
+
+.countdown #hour::after {
+	content: 'Hours'
+}
+
+.countdown #minute::after {
+	content: 'Minutes'
+}
+
+.countdown #second::after {
+	content: 'Seconds'
+}
+
+.mountain {
+	background: #043652;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	overflow: hidden;
+}
+
+.mountain div {
+	position: absolute;
+}
+
+.mountain div#group1 {
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+
+.mountain div span {
+	background: #2a4b6f;
+	border-radius: 50%;
+	position: absolute;
+}
+
+.pos-1 {
+	left: -12%;
+	bottom: -35%;
+}
+
+.pos-2 {
+	left: 25%;	
+	bottom: 0%;
+}
+
+.pos-3 {
+	left: 35%;
+	bottom: -15%;
+}
+
+.pos-4 {
+	right: 20%;
+	bottom: -5%;
+}
+
+.pos-5 {
+	right: -10%;
+	bottom: -25%;
+}
+
+.mountain div span.big {
+	width: 500px;
+	height: 400px;
+}
+
+.mountain div span.small {
+	width: 150px;
+	height: 150px;
+}
+
+.mountain div span.medium {
+	width: 300px;
+	height: 250px;
+}
+
+.mountain div#group3, .mountain div#group2 {
+	width: 100%;
+	height: 100%;
+	z-index: -3;
+}
+
+.pos-7 {
+	top: 30%;
+	left: 2%;
+}
+
+.pos-8 {
+	bottom: 25%;
+	left: 10%;
+}
+
+.pos-9 {
+	bottom: 30%;
+	left: -5%;
+}
+
+.pos-10 {
+	top: 25%;
+	right: 2%;
+}
+
+.pos-11 {
+	top: 20%;
+	right: 12%;
+}
+
+.pos-12 {
+	top: 30%;
+	right: -5%;
+}
+
+.pos-13 {
+	top: 40%;
+	right: 20%;
+}
+
+.mountain div#group3 span, .mountain div#group2 span{
+	background-color: transparent;
+	animation-name: example;
+  	animation-duration: 2s;
+	animation-iteration-count: infinite;
+}	
+
+@keyframes example {
+  0%   {background-color: #2a4b6f;}
+  50%  {background-color: #1f4567;}
+  75%  {background-color: #0f3c5a;}
+  100% {background-color: transparent;}
+}
+
+@media only screen and (max-width: 768px){
+	.mountain div#group3, 
+	.mountain div#group2 {
+		display: none;
+	}
+}
